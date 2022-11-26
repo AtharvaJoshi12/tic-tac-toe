@@ -57,7 +57,7 @@ nav ul {
 }
 
 .box:hover {
-  background-color: rgb(242, 234, 250);
+  background-color: rgb(250, 228, 101);
 }
 
 .info {
@@ -115,6 +115,11 @@ nav ul {
   transition: width 1s ease-in-out;
 }
 
+#themeSelector {
+  height: 30px;
+  border-radius: 5px;
+  margin: 10px;
+}
 @media screen and (max-width: 950px) {
   .gameContainer {
     flex-wrap: wrap;

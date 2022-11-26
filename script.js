@@ -80,3 +80,37 @@ reset.addEventListener("click", () => {
 
 // const player1 = prompt("Enter Player 1 name:");
 // const player2 = prompt("Enter Player 2 name:");
+
+const themeSelector = document.querySelector("#themeSelector");
+
+themeSelector.addEventListener("change", (e) => {
+  localStorage.setItem("theme", e.target.value);
+  changeTheme(e.target.value);
+});
+
+let myTheme = localStorage.getItem("theme");
+console.log(myTheme);
+changeTheme(myTheme);
+
+function changeTheme(theme) {
+  if (theme === "dark") {
+    document.body.style.backgroundColor = "#222";
+    document.querySelector(".gameInfo").style.color = "white";
+    document.querySelector(".container").style.color = "white";
+  } else if (theme === "light") {
+    document.body.style.backgroundColor = "#e5e5e5";
+    document.querySelector(".gameInfo").style.color = "black";
+    document.querySelector(".container").style.color = "black";
+  } else {
+    document.body.style.backgroundColor = "#e5e5e5";
+    document.querySelector(".gameInfo").style.color = "black";
+    document.querySelector(".container").style.color = "black";
+  }
+}
+
+window.addEventListener("storage", (e) => {
+  if (e.key === "theme") {
+    changeTheme(e.newValue);
+    themeSelector.value = e.newValue;
+  }
+});
