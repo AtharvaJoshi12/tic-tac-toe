@@ -78,5 +78,5 @@ reset.addEventListener("click", () => {
 
 //=============================================
 
-const player1 = prompt("Enter Player 1 name:");
-const player2 = prompt("Enter Player 2 name:");
+// const player1 = prompt("Enter Player 1 name:");
+// const player2 = prompt("Enter Player 2 name:");

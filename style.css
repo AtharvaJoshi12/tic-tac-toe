@@ -97,12 +97,13 @@ nav ul {
 #reset {
   margin: 0 23px;
   padding: 1px 18px;
-  background: #f3e7f9;
   border-radius: 6px;
   cursor: pointer;
   font-family: "Baloo Bhaina 2";
   font-size: 15px;
   font-weight: bolder;
+  background-color: #f5c903;
+  border-color: #f5c903;
 }
 
 .line {
